@@ -1,0 +1,7 @@
+## License
+
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
+
+This project utilizes the following third-party libraries:
+-   [prometheus/client_golang](https://github.com/prometheus/client_golang) (Apache 2.0 License)
+-   [joho/godotenv](https://github.com/joho/godotenv) (MIT License)
