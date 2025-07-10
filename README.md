@@ -1,4 +1,4 @@
-# FastNetMon Prometheus Exporter
+# FastNetMon Blackhole Prometheus Exporter
 
 A Prometheus exporter written in Go that collects blocked IP addresses from the FastNetMon API.
 
