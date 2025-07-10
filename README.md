@@ -1,10 +1,10 @@
-# FastNetMon Blackhole Prometheus Exporter
+# Blackhole Prometheus Exporter
 
-A Prometheus exporter written in Go that collects blocked IP addresses from the FastNetMon API.
+A Prometheus exporter written in Go that collects blocked IP addresses from the API.
 
 ## Features
 
-- Pulls blocked IPs from FastNetMon's REST API (`/blackhole` endpoint).
+- Pulls blocked IPs from REST API (`/blackhole` endpoint).
 - Exposes them as Prometheus metrics: `blocked_ip{ip="..."}`.
 - Proper error and authorization checks with readable logging.
 - All configuration via environment variables (`.env`-ready).
@@ -17,7 +17,7 @@ A Prometheus exporter written in Go that collects blocked IP addresses from the 
 
 | Variable             | Description                                  | Example                                   |
 |----------------------|----------------------------------------------|-------------------------------------------|
-| `EXPORTER_API_URL`   | FastNetMon API URL (blackhole endpoint)      | `http://example.com/blackhole`            |
+| `EXPORTER_API_URL`   | API URL (blackhole endpoint)      | `http://example.com/blackhole`            |
 | `EXPORTER_USER`      | API username                                 | `api`                                     |
 | `EXPORTER_PASSWORD`  | API password                                 | `password`                                |
 | `EXPORTER_PORT`      | Port to run the exporter on                  | `:9898`                                   |
@@ -45,11 +45,11 @@ A Prometheus exporter written in Go that collects blocked IP addresses from the 
 
 1. Build the image:
     ```sh
-    docker build -t fastnetmon_exporter .
+    docker build -t exporter .
     ```
 2. Run using your `.env` file:
     ```sh
-    docker run --rm -p 9898:9898 --env-file .env fastnetmon_exporter
+    docker run --rm -p 9898:9898 --env-file .env exporter
     ```
 3. Check Prometheus metrics:
     ```sh
